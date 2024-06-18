@@ -64,6 +64,7 @@ const dashboard = (props) => {
               id='company_name'
               placeholder='Company Name: '
             ></input>
+            <label htmlFor='dateApplied' id='dateApplied'>Date Applied:</label>
             <input
               type='date'
               id='start'
