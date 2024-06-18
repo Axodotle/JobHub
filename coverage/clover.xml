@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1718745293572" clover="3.2.0">
-  <project timestamp="1718745293572" name="All files">
-    <metrics statements="77" coveredstatements="5" conditionals="13" coveredconditionals="0" methods="23" coveredmethods="1" elements="113" coveredelements="6" complexity="0" loc="77" ncloc="77" packages="7" files="14" classes="14"/>
+<coverage generated="1718747752291" clover="3.2.0">
+  <project timestamp="1718747752291" name="All files">
+    <metrics statements="66" coveredstatements="5" conditionals="7" coveredconditionals="0" methods="22" coveredmethods="1" elements="95" coveredelements="6" complexity="0" loc="66" ncloc="66" packages="7" files="14" classes="14"/>
     <package name="src">
-      <metrics statements="13" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.jsx" path="/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/src/App.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="8" count="3" type="stmt"/>
       </file>
       <file name="index.jsx" path="/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/src/index.jsx">
-        <metrics statements="12" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components">
