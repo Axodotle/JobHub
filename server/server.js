@@ -1,27 +1,34 @@
 const express = require('express');
 // const { restart } = require('nodemon');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+// const bodyParser = require('body-parser');
+// const cors = require('cors');
 const routerSignup = require('./routes/users'); //Change variable label to userRouter?
 const applicationsRouter = require('./routes/applications');
 
 const app = express();
 const path = require('path');
 
-//
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(cors());
+// Outdated parser - Express has implemented built-in parser and encoder
+app.use(express.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+
+//Look into this
+// app.use(cors());
 
 // statically serve everything in the build folder on the route '/build'
 // app.use('/build', express.static(path.join(__dirname, '../build')));
 // serve index.html on the route '/'
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'), function (err) {
-    if (err) {
-      res.status(500).send(err);
+app.get('/', (req, res) => {
+  res.sendFile(
+    path.join(__dirname, '../client/public/index.html'),
+    function (err) {
+      //fixed this path. It was not functioning properly.
+      if (err) {
+        res.status(500).send(err);
+      }
     }
-  });
+  );
 });
 
 app.use('/users', routerSignup);

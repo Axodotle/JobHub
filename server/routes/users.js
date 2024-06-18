@@ -8,7 +8,7 @@ const routerSignup = express.Router();
 // ADD STARTER DATA REQUEST ROUTE HANDLER HERE
 
 routerSignup.get('/', (req, res) => {
-  res.json({ message: 'Server Workin' });
+  res.json({ message: 'Server Working' });
 });
 
 routerSignup.post(

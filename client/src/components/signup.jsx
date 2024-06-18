@@ -15,7 +15,18 @@ const Signup = () => {
     // console.log(newFirstname.value);
     // console.log(newLastname.value);
 
-    fetch('http://localhost:3000/users/signup', {
+    // fetch('http://localhost/users/signup', {
+    //   headers: {
+    //     Accept: 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+
+    // updated route and fixed broken headers
+    // https://developer.mozilla.org/en-US/docs/Web/API/Headers
+
+    // ESLINT/PRETTIER????
+
+    fetch('/users/signup', {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',

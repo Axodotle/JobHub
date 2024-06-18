@@ -1,0 +1,520 @@
+jeremykay@Jeremys-Laptop-743 job-app-tracker-iteration % npm test
+
+> test
+> jest
+
+console.error
+Warning: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons: 1. You might have mismatching versions of React and the renderer (such as React DOM) 2. You might be breaking the Rules of Hooks 3. You might have more than one copy of React in the same app
+See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.
+
+       5 | describe('App tests', () => {
+       6 |   it('should contain heading 1', () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const heading = screen.getByText(/JobHub/i);
+       9 |     expect(heading).toBeInTheDocument();
+      10 |   });
+
+      at printWarning (client/node_modules/react/cjs/react.development.js:209:30)
+      at error (client/node_modules/react/cjs/react.development.js:183:7)
+      at resolveDispatcher (client/node_modules/react/cjs/react.development.js:1592:7)
+      at Object.useContext (client/node_modules/react/cjs/react.development.js:1602:20)
+      at useContext (client/node_modules/react-router/lib/hooks.tsx:90:16)
+      at useInRouterContext (client/node_modules/react-router/lib/hooks.tsx:354:5)
+      at useRoutesImpl (client/node_modules/react-router/lib/hooks.tsx:343:10)
+      at useRoutes (client/node_modules/react-router/lib/components.tsx:507:10)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (client/test/App.test.jsx:7:11)
+
+console.error
+Warning: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons: 1. You might have mismatching versions of React and the renderer (such as React DOM) 2. You might be breaking the Rules of Hooks 3. You might have more than one copy of React in the same app
+See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.
+
+       5 | describe('App tests', () => {
+       6 |   it('should contain heading 1', () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const heading = screen.getByText(/JobHub/i);
+       9 |     expect(heading).toBeInTheDocument();
+      10 |   });
+
+      at printWarning (client/node_modules/react/cjs/react.development.js:209:30)
+      at error (client/node_modules/react/cjs/react.development.js:183:7)
+      at resolveDispatcher (client/node_modules/react/cjs/react.development.js:1592:7)
+      at Object.useContext (client/node_modules/react/cjs/react.development.js:1602:20)
+      at useContext (client/node_modules/react-router/lib/hooks.tsx:90:16)
+      at useInRouterContext (client/node_modules/react-router/lib/hooks.tsx:354:5)
+      at useRoutesImpl (client/node_modules/react-router/lib/hooks.tsx:343:10)
+      at useRoutes (client/node_modules/react-router/lib/components.tsx:507:10)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (client/test/App.test.jsx:7:11)
+
+console.error
+Error: Uncaught [TypeError: Cannot read properties of null (reading 'useContext')]
+at reportException (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+at innerInvokeEventListeners (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+at invokeEventListeners (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+at HTMLUnknownElementImpl.\_dispatch (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+at HTMLUnknownElementImpl.dispatchEvent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+at HTMLUnknownElement.dispatchEvent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+at Object.invokeGuardedCallbackDev (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+at invokeGuardedCallback (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+at beginWork$1 (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+at performUnitOfWork (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+at workLoopSync (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+at renderRootSync (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+at performConcurrentWorkOnRoot (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+at flushActQueue (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react/cjs/react.development.js:2667:24)
+at act (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react/cjs/react.development.js:2582:11)
+at /Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/act-compat.js:47:25
+at renderRoot (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/pure.js:180:26)
+at render (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/pure.js:271:10)
+at Object.<anonymous> (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/test/App.test.jsx:7:11)
+at Promise.then.completed (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/utils.js:298:28)
+at new Promise (<anonymous>)
+at callAsyncCircusFn (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/utils.js:231:10)
+at \_callCircusTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:316:40)
+at processTicksAndRejections (node:internal/process/task_queues:95:5)
+at \_runTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:252:3)
+at \_runTestsForDescribeBlock (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:126:9)
+at \_runTestsForDescribeBlock (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:121:9)
+at run (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:71:3)
+at runAndTransformResultsToJestFormat (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+at jestAdapter (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+at runTestInternal (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-runner/build/runTest.js:367:16)
+at runTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-runner/build/runTest.js:444:34) {
+detail: TypeError: Cannot read properties of null (reading 'useContext')
+at Object.useContext (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react/cjs/react.development.js:1618:21)
+at useContext (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/hooks.tsx:90:16)
+at useInRouterContext (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/hooks.tsx:354:5)
+at useRoutesImpl (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/hooks.tsx:343:10)
+at useRoutes (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/components.tsx:507:10)
+at renderWithHooks (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+at mountIndeterminateComponent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+at beginWork (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+at HTMLUnknownElement.callCallback (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+at HTMLUnknownElement.callTheUserObjectsOperation (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+at innerInvokeEventListeners (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+at invokeEventListeners (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+at HTMLUnknownElementImpl.\_dispatch (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+at HTMLUnknownElementImpl.dispatchEvent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+at HTMLUnknownElement.dispatchEvent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+at Object.invokeGuardedCallbackDev (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+at invokeGuardedCallback (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+at beginWork$1 (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+at performUnitOfWork (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+at workLoopSync (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+at renderRootSync (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+at performConcurrentWorkOnRoot (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+at flushActQueue (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react/cjs/react.development.js:2667:24)
+at act (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react/cjs/react.development.js:2582:11)
+at /Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/act-compat.js:47:25
+at renderRoot (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/pure.js:180:26)
+at render (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/pure.js:271:10)
+at Object.<anonymous> (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/test/App.test.jsx:7:11)
+at Promise.then.completed (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/utils.js:298:28)
+at new Promise (<anonymous>)
+at callAsyncCircusFn (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/utils.js:231:10)
+at \_callCircusTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:316:40)
+at processTicksAndRejections (node:internal/process/task_queues:95:5)
+at \_runTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:252:3)
+at \_runTestsForDescribeBlock (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:126:9)
+at \_runTestsForDescribeBlock (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:121:9)
+at run (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:71:3)
+at runAndTransformResultsToJestFormat (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+at jestAdapter (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+at runTestInternal (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-runner/build/runTest.js:367:16)
+at runTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-runner/build/runTest.js:444:34),
+type: 'unhandled exception'
+}
+
+       5 | describe('App tests', () => {
+       6 |   it('should contain heading 1', () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const heading = screen.getByText(/JobHub/i);
+       9 |     expect(heading).toBeInTheDocument();
+      10 |   });
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (client/test/App.test.jsx:7:11)
+
+console.error
+Warning: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons: 1. You might have mismatching versions of React and the renderer (such as React DOM) 2. You might be breaking the Rules of Hooks 3. You might have more than one copy of React in the same app
+See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.
+
+       5 | describe('App tests', () => {
+       6 |   it('should contain heading 1', () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const heading = screen.getByText(/JobHub/i);
+       9 |     expect(heading).toBeInTheDocument();
+      10 |   });
+
+      at printWarning (client/node_modules/react/cjs/react.development.js:209:30)
+      at error (client/node_modules/react/cjs/react.development.js:183:7)
+      at resolveDispatcher (client/node_modules/react/cjs/react.development.js:1592:7)
+      at Object.useContext (client/node_modules/react/cjs/react.development.js:1602:20)
+      at useContext (client/node_modules/react-router/lib/hooks.tsx:90:16)
+      at useInRouterContext (client/node_modules/react-router/lib/hooks.tsx:354:5)
+      at useRoutesImpl (client/node_modules/react-router/lib/hooks.tsx:343:10)
+      at useRoutes (client/node_modules/react-router/lib/components.tsx:507:10)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at recoverFromConcurrentError (node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (client/test/App.test.jsx:7:11)
+
+console.error
+Warning: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons: 1. You might have mismatching versions of React and the renderer (such as React DOM) 2. You might be breaking the Rules of Hooks 3. You might have more than one copy of React in the same app
+See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.
+
+       5 | describe('App tests', () => {
+       6 |   it('should contain heading 1', () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const heading = screen.getByText(/JobHub/i);
+       9 |     expect(heading).toBeInTheDocument();
+      10 |   });
+
+      at printWarning (client/node_modules/react/cjs/react.development.js:209:30)
+      at error (client/node_modules/react/cjs/react.development.js:183:7)
+      at resolveDispatcher (client/node_modules/react/cjs/react.development.js:1592:7)
+      at Object.useContext (client/node_modules/react/cjs/react.development.js:1602:20)
+      at useContext (client/node_modules/react-router/lib/hooks.tsx:90:16)
+      at useInRouterContext (client/node_modules/react-router/lib/hooks.tsx:354:5)
+      at useRoutesImpl (client/node_modules/react-router/lib/hooks.tsx:343:10)
+      at useRoutes (client/node_modules/react-router/lib/components.tsx:507:10)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at recoverFromConcurrentError (node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (client/test/App.test.jsx:7:11)
+
+console.error
+Error: Uncaught [TypeError: Cannot read properties of null (reading 'useContext')]
+at reportException (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+at innerInvokeEventListeners (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+at invokeEventListeners (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+at HTMLUnknownElementImpl.\_dispatch (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+at HTMLUnknownElementImpl.dispatchEvent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+at HTMLUnknownElement.dispatchEvent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+at Object.invokeGuardedCallbackDev (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+at invokeGuardedCallback (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+at beginWork$1 (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+at performUnitOfWork (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+at workLoopSync (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+at renderRootSync (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+at recoverFromConcurrentError (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+at performConcurrentWorkOnRoot (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+at flushActQueue (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react/cjs/react.development.js:2667:24)
+at act (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react/cjs/react.development.js:2582:11)
+at /Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/act-compat.js:47:25
+at renderRoot (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/pure.js:180:26)
+at render (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/pure.js:271:10)
+at Object.<anonymous> (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/test/App.test.jsx:7:11)
+at Promise.then.completed (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/utils.js:298:28)
+at new Promise (<anonymous>)
+at callAsyncCircusFn (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/utils.js:231:10)
+at \_callCircusTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:316:40)
+at processTicksAndRejections (node:internal/process/task_queues:95:5)
+at \_runTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:252:3)
+at \_runTestsForDescribeBlock (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:126:9)
+at \_runTestsForDescribeBlock (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:121:9)
+at run (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:71:3)
+at runAndTransformResultsToJestFormat (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+at jestAdapter (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+at runTestInternal (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-runner/build/runTest.js:367:16)
+at runTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-runner/build/runTest.js:444:34) {
+detail: TypeError: Cannot read properties of null (reading 'useContext')
+at Object.useContext (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react/cjs/react.development.js:1618:21)
+at useContext (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/hooks.tsx:90:16)
+at useInRouterContext (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/hooks.tsx:354:5)
+at useRoutesImpl (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/hooks.tsx:343:10)
+at useRoutes (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/components.tsx:507:10)
+at renderWithHooks (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+at mountIndeterminateComponent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+at beginWork (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+at HTMLUnknownElement.callCallback (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+at HTMLUnknownElement.callTheUserObjectsOperation (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+at innerInvokeEventListeners (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+at invokeEventListeners (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+at HTMLUnknownElementImpl.\_dispatch (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+at HTMLUnknownElementImpl.dispatchEvent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+at HTMLUnknownElement.dispatchEvent (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+at Object.invokeGuardedCallbackDev (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+at invokeGuardedCallback (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+at beginWork$1 (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+at performUnitOfWork (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+at workLoopSync (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+at renderRootSync (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+at recoverFromConcurrentError (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+at performConcurrentWorkOnRoot (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+at flushActQueue (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react/cjs/react.development.js:2667:24)
+at act (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/react/cjs/react.development.js:2582:11)
+at /Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/act-compat.js:47:25
+at renderRoot (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/pure.js:180:26)
+at render (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/@testing-library/react/dist/pure.js:271:10)
+at Object.<anonymous> (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/test/App.test.jsx:7:11)
+at Promise.then.completed (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/utils.js:298:28)
+at new Promise (<anonymous>)
+at callAsyncCircusFn (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/utils.js:231:10)
+at \_callCircusTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:316:40)
+at processTicksAndRejections (node:internal/process/task_queues:95:5)
+at \_runTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:252:3)
+at \_runTestsForDescribeBlock (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:126:9)
+at \_runTestsForDescribeBlock (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:121:9)
+at run (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/run.js:71:3)
+at runAndTransformResultsToJestFormat (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+at jestAdapter (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+at runTestInternal (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-runner/build/runTest.js:367:16)
+at runTest (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/node_modules/jest-runner/build/runTest.js:444:34),
+type: 'unhandled exception'
+}
+
+       5 | describe('App tests', () => {
+       6 |   it('should contain heading 1', () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const heading = screen.getByText(/JobHub/i);
+       9 |     expect(heading).toBeInTheDocument();
+      10 |   });
+
+      at VirtualConsole.<anonymous> (node_modules/jest-environment-jsdom/build/index.js:63:23)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at recoverFromConcurrentError (node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (client/test/App.test.jsx:7:11)
+
+console.error
+The above error occurred in the <Routes> component:
+
+        at children (/Users/jeremykay/Documents/Codesmith/job-app-tracker-iteration/client/node_modules/react-router/lib/components.tsx:504:3)
+        at div
+        at App
+
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+       5 | describe('App tests', () => {
+       6 |   it('should contain heading 1', () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const heading = screen.getByText(/JobHub/i);
+       9 |     expect(heading).toBeInTheDocument();
+      10 |   });
+
+      at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18704:23)
+      at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18737:5)
+      at callCallback (node_modules/react-dom/cjs/react-dom.development.js:15036:12)
+      at commitUpdateQueue (node_modules/react-dom/cjs/react-dom.development.js:15057:9)
+      at commitLayoutEffectOnFiber (node_modules/react-dom/cjs/react-dom.development.js:23430:13)
+      at commitLayoutMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24727:9)
+      at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24713:7)
+      at commitLayoutEffects (node_modules/react-dom/cjs/react-dom.development.js:24651:3)
+      at commitRootImpl (node_modules/react-dom/cjs/react-dom.development.js:26862:5)
+      at commitRoot (node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at finishConcurrentRender (node_modules/react-dom/cjs/react-dom.development.js:25931:9)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (client/test/App.test.jsx:7:11)
+
+FAIL client/test/App.test.jsx
+App tests
+✕ should contain heading 1 (70 ms)
+
+● App tests › should contain heading 1
+
+    TypeError: Cannot read properties of null (reading 'useContext')
+
+       5 | describe('App tests', () => {
+       6 |   it('should contain heading 1', () => {
+    >  7 |     render(<App />);
+         |           ^
+       8 |     const heading = screen.getByText(/JobHub/i);
+       9 |     expect(heading).toBeInTheDocument();
+      10 |   });
+
+      at Object.useContext (client/node_modules/react/cjs/react.development.js:1618:21)
+      at useContext (client/node_modules/react-router/lib/hooks.tsx:90:16)
+      at useInRouterContext (client/node_modules/react-router/lib/hooks.tsx:354:5)
+      at useRoutesImpl (client/node_modules/react-router/lib/hooks.tsx:343:10)
+      at useRoutes (client/node_modules/react-router/lib/components.tsx:507:10)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at recoverFromConcurrentError (node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (client/test/App.test.jsx:7:11)
+
+-------------------------------------------|---------|----------|---------|---------|-------------------
+File | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-------------------------------------------|---------|----------|---------|---------|-------------------
+All files | 7.14 | 0 | 4.54 | 7.57 |  
+ src | 50 | 100 | 100 | 50 |  
+ App.jsx | 100 | 100 | 100 | 100 |  
+ index.jsx | 0 | 100 | 100 | 0 | 9  
+ src/components | 6.81 | 0 | 0 | 6.81 |  
+ dashboard.jsx | 7.69 | 100 | 0 | 7.69 | 7-25  
+ login.jsx | 5.88 | 0 | 0 | 5.88 | 7-51  
+ sidebar.jsx | 0 | 100 | 0 | 0 | 5  
+ sidebarBox.jsx | 0 | 100 | 0 | 0 | 4  
+ signup.jsx | 8.33 | 100 | 0 | 8.33 | 5-42  
+ src/components/application-card-component | 50 | 100 | 0 | 50 |  
+ application-card.jsx | 50 | 100 | 0 | 50 | 6  
+ src/components/application-list-component | 0 | 100 | 0 | 0 |  
+ application-list.jsx | 0 | 100 | 0 | 0 | 4  
+ src/redux | 0 | 100 | 100 | 0 |  
+ loginslice.jsx | 0 | 0 | 0 | 0 |  
+ store.jsx | 0 | 100 | 100 | 0 | 4  
+ src/redux/actions | 0 | 100 | 0 | 0 |  
+ actionTypes.js | 0 | 100 | 100 | 0 | 1-4  
+ actions.js | 0 | 100 | 0 | 0 | 3-18  
+ src/redux/reducers | 0 | 0 | 0 | 0 |  
+ applicationsReducer.js | 0 | 0 | 0 | 0 | 3-39  
+-------------------------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests: 1 failed, 1 total
+Snapshots: 0 total
+Time: 1.316 s
+Ran all test suites.
+%  
+jeremykay@Jeremys-Laptop-743 job-app-tracker-iteration % >....  
+ App.jsx | 100 | 100 | 100 | 100 |  
+ index.jsx | 0 | 100 | 100 | 0 | 9  
+ src/components | 6.81 | 0 | 0 | 6.81 |  
+ dashboard.jsx | 7.69 | 100 | 0 | 7.69 | 7-25  
+ login.jsx | 5.88 | 0 | 0 | 5.88 | 7-51  
+ sidebar.jsx | 0 | 100 | 0 | 0 | 5  
+ sidebarBox.jsx | 0 | 100 | 0 | 0 | 4  
+ signup.jsx | 8.33 | 100 | 0 | 8.33 | 5-42  
+ src/components/application-card-component | 50 | 100 | 0 | 50 |  
+ application-card.jsx | 50 | 100 | 0 | 50 | 6  
+ src/components/application-list-component | 0 | 100 | 0 | 0 |  
+ application-list.jsx | 0 | 100 | 0 | 0 | 4  
+ App.jsx | 100 | 100 | 100 | 100 |
+index.jsx | 0 | 100 | 100 | 0 | 9
+src/components | 6.81 | 0 | 0 | 6.81 |
+dashboard.jsx | 7.69 | 100 | 0 | 7.69 | 7-25
+login.jsx | 5.88 | 0 | 0 | 5.88 | 7-51
+sidebar.jsx | 0 | 100 | 0 | 0 | 5
+sidebarBox.jsx | 0 | 100 | 0 | 0 | 4
+signup.jsx | 8.33 | 100 | 0 | 8.33 | 5-42
+src/components/application-card-component | 50 | 100 | 0 | 50 |
+application-card.jsx | 50 | 100 | 0 | 50 | 6
+src/components/application-list-component | 0 | 100 | 0 | 0 |
+application-list.jsx | 0 | 100 | 0 | 0 | 4
+src/redux | 0 | 100 | 100 | 0 |
+loginslice.jsx | 0 | 0 | 0 | 0 |
+store.jsx | 0 | 100 | 100 | 0 | 4
+jeremykay@
+%
