@@ -1,19 +1,30 @@
 import * as types from '../actions/actionTypes';
 
+// const initialState = {
+//   companyName : '',
+//   dateApplied : '',
+//   status: '',
+//   role: '',
+//   notes: '',
+// };
+
 const initialState = {
-  companyName : '',
-  dateApplied : '',
-  status: '',
-  role: '',
-  notes: '',
+  totalApps: 0,
+  appsList: [], //hold individual application objects
+  lastAppID: 100,
 };
 
 const applicationsReducer = (state = initialState, action) => {
+  let appsList;
+  let totalApps;
 
   switch (action.type) {
     case types.ADD_CARD:
+      const appID = state.lastAppID + 1;
+      totalApps = state.totalApps + 1;
 
-      newCard = {
+      const newCard = {
+        appID,
         companyName: action.payload.companyName,
         dateApplied: action.payload.dateApplied,
         status: action.payload.status,
@@ -21,17 +32,18 @@ const applicationsReducer = (state = initialState, action) => {
         notes: action.payload.notes,
       };
 
-      // push the new market onto a copy of the market list
+      // push the new application onto a copy of the application list
+      appsList = state.appsList.slice();
+      appsList.push(newCard);
 
       // return updated state
-      return Object.assign({}, state, {
-        companyName: action.payload.companyName,
-        dateApplied: action.payload.dateApplied,
-        status: action.payload.status,
-        role: action.payload.role,
-        notes: action.payload.notes,
-      });
-    case types.ADD_CARD:
+      return {
+        ...state,
+        totalApps,
+        appsList,
+        lastAppID: appID,
+      };
+    case types.ADD_CARD: // duplicate case - placeholder?
       break;
     case types.DELETE_CARD:
       break;

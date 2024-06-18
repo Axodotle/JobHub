@@ -6,16 +6,16 @@ module.exports = {
   mode: 'development',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/'
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
- 
+
   module: {
     rules: [
       {
         test: /\.jsx?/,
         exclude: /node_modules/,
-        
+
         use: {
           loader: 'babel-loader',
           options: {
@@ -23,10 +23,10 @@ module.exports = {
           },
         },
       },
-      
+
       {
         test: /\.s?css/,
-      
+
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],

@@ -16,6 +16,7 @@ const Signup = () => {
     // console.log(newLastname.value);
 
     fetch('http://localhost:3000/users/signup', {
+      // This could probably use soem iterating on
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
