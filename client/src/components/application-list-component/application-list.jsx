@@ -1,9 +1,26 @@
 import React from 'react';
 import ApplicationCard from '../application-card-component/application-card';
+import { useSelector } from 'react-redux';
+//access state + use map to loop through and create app card components
+
 export default function ApplicationList() {
-  return (
-    <div className='application-list' id="application_list" >
+  const appsList = useSelector((store) => store.applications.appsList);
+
+  const appsListDisplay = appsList.map((app) => {
+    //add notes to the application card
+    return (
       <ApplicationCard
+        companyName={app.companyName}
+        dateApplied={app.dateApplied}
+        status={app.status}
+        role={app.role}
+        notes={app.notes}
+      />
+    );
+  });
+  return (
+    <div className='application-list' id='application_list'>
+      {/* <ApplicationCard
         companyName={'McDonalds'}
         dateApplied={'10 / 25 / 2023'}
         status={'Applied'}
@@ -23,7 +40,8 @@ export default function ApplicationList() {
         status={'Have not heard back'}
         role={'Custodian'}
         notes={'Please hire me!!!'}
-      />
+      /> */}
+      {appsListDisplay}
     </div>
   );
 }

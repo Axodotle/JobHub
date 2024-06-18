@@ -3,6 +3,6 @@ import applicationsReducer from './reducers/applicationsReducer';
 
 export const store = configureStore({
   reducer: {
-    applications : applicationsReducer,
+    applications: applicationsReducer,
   },
 });
