@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import store from '../redux/store.jsx';
 
 export default function Sidebar() {
-  const totalApps = useSelector((store) => store.totalApps);
-  console.log(totalApps);
+  const totalApps = useSelector((store) => store.applications.totalApps);
+  console.log('totalApps', totalApps);
 
   return (
     <div className='sidebar-container'>

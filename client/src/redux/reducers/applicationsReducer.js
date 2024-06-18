@@ -43,8 +43,7 @@ const applicationsReducer = (state = initialState, action) => {
         appsList,
         lastAppID: appID,
       };
-    case types.ADD_CARD: // duplicate case - placeholder?
-      break;
+
     case types.DELETE_CARD:
       break;
     default: {
