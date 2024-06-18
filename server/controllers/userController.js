@@ -28,7 +28,7 @@ userController.createUser = (req, res, next) => {
   const query = `INSERT INTO users(firstname, lastname, username, password) VALUES ($1, $2, $3, $4) RETURNING *`;
   // const passQuery = `SELECT password FROM users WHERE username = '${username}'`;
 
-  db.query(query, params)
+  db.query(query, params) //look into this
     .then((createdUser) => {
       console.log('Hi from createUser method');
       res.locals.createdUser = createdUser.rows[0];
