@@ -2,14 +2,14 @@ const db = require('../models/userModels');
 
 const applicationController = {};
 
-applicationController.createApp = async(req, res, next) => {
+applicationController.createApp = async (req, res, next) => {
   const { company, date_applied, roles, status } = req.body;
-    
 
   const params = [company, date_applied, roles, status];
-  const query = `INSERT INTO applications (company, date_applied, roles, status) VALUES ($1, $2, $3, $4, $5)`;
+  const query = `INSERT INTO applications (company, date_applied, roles, status) VALUES ($1, $2, $3, $4)`;
 
-  await db.query(query, params)
+  await db
+    .query(query, params)
     .then((data) => {
       console.log('Create application, ', data);
       res.status(200).send('Created App');
@@ -33,7 +33,8 @@ applicationController.getApp = async (req, res, next) => {
     WHERE applications.id = $1`;
   const params = [id];
 
-  await db.query(query, params)
+  await db
+    .query(query, params)
     .then((data) => {
       console.log('Get application, ', data);
       res.status(200).send('Get App');
@@ -49,4 +50,4 @@ applicationController.getApp = async (req, res, next) => {
     });
 };
 
-module.exports = applicationController
+module.exports = applicationController;
