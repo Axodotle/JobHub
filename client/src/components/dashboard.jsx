@@ -38,6 +38,10 @@ const dashboard = (props) => {
     console.log('formObj', formObj);
 
     dispatch(actions.addCard(formObj));
+    companyName.value = '';
+    date.value = '';
+    appStatus.value = '';
+    role.value = '';
 
     // create a request to database with new job app
     //clear form via updated state
@@ -72,7 +76,7 @@ const dashboard = (props) => {
                   Select App Status...
                 </option>
                 <option value='Applied'>Applied</option>
-                <option value='Intial Interview'>Inital Interview</option>
+                <option value='Intial Interview'>Initial Interview</option>
                 <option value='Second Interview'>Second Interview</option>
                 <option value='Rejected'>Rejected</option>
                 <option value='Have not heard back'>Have not heard Back</option>
