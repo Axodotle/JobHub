@@ -8,7 +8,7 @@ const ApplicationCard = ({ companyName, dateApplied, status, role, notes }) => {
       <p>Date Applied: {dateApplied}</p>
       <p>Application Status: {status}</p>
       <p>Role: {role}</p>
-      <p>{notes}</p>
+      <p>Notes: {notes}</p>
     </div>
   );
 };

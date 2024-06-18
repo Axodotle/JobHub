@@ -26,10 +26,6 @@ routerSignup.post('/login', userController.setCookies, userController.verifyUser
   sessionStorage.username = res.locals.userName
   return res.status(200).json(res.locals.loginPassword);
 });
-// ADD GET MORE CHARACTERS ROUTE HANDLER HERE
 
 module.exports = routerSignup;
-//amcatee
-//codesmith
-//ashe
-//mcatee
+

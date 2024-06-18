@@ -14,6 +14,7 @@ export default function ApplicationList() {
         dateApplied={app.dateApplied}
         status={app.status}
         role={app.role}
+        notes={app.notes}
       />
     );
   });

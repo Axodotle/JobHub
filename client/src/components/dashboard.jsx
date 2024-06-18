@@ -28,12 +28,14 @@ const dashboard = (props) => {
     const date = document.querySelector('#start');
     const appStatus = document.querySelector('#status');
     const role = document.querySelector('#role');
+    const notes = document.querySelector('#notes');
 
     const formObj = {
       companyName: companyName.value,
       dateApplied: date.value,
       status: appStatus.value,
       role: role.value,
+      notes: notes.value,
     };
     console.log('formObj', formObj);
 
@@ -42,6 +44,7 @@ const dashboard = (props) => {
     date.value = '';
     appStatus.value = '';
     role.value = '';
+    notes.value = '';
 
     // create a request to database with new job app
     //clear form via updated state
@@ -84,6 +87,7 @@ const dashboard = (props) => {
               </select>
             </form>
             <input type='text' id='role' placeholder='Role: '></input>
+            <input type='text' id='notes' placeholder='Notes: '></input>
             <button type='submit' className='btn' onClick={handleSubmit}>
               Submit
             </button>
