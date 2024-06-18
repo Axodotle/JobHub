@@ -33,8 +33,9 @@ const Signup = () => {
         console.log('this is fetch response', data);
         navigate('/');
       })
-      .catch(function (res) {
-        alert('bad');
+      .catch((err) => {
+        // changed to catch error
+        console.log(err);
       });
   }
 
