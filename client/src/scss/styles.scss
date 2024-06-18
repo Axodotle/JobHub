@@ -32,7 +32,7 @@ body {
 }
 
 .header {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: Josefin Sans;
   font-size: 60px;
   font-weight: bold;
   color: rgb(55, 53, 53);
@@ -112,4 +112,47 @@ body {
   height: 400px;
   overflow-y: scroll;
   width: 100%;
+}
+
+#notes {
+  padding: 1px;
+  height: 30px;
+  overflow-y: scroll;
+  width: 80%;
+  margin: 10px;
+}
+
+#company_name {
+  padding: 1px;
+  margin: 10px;
+  width: 80%;
+}
+
+#start {
+  padding: 1px;
+  margin: 10px;
+  width: 80%;
+}
+
+#status {
+  padding: 1px;
+  margin: 10px;
+  width: 80%;
+}
+
+#role {
+  padding: 1px;
+  margin: 10px;
+  width: 80%;
+}
+
+.btn {
+  background-color: rgb(28, 157, 221);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 20%;
+  display: flex;
+  justify-content: center;
 }
