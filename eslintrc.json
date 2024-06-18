@@ -17,7 +17,15 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "jest"],
+  "plugins": ["react"],
+  "overrides": [
+    {
+      "files": ["./client/test/**"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"],
+      "rules": { "jest/prefer-expect-assertions": "off" }
+    }
+  ],
   "rules": {
     "no-underscore-dangle": 0,
     "import/extensions": [
