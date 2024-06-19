@@ -1,9 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 // import './styles.css';
 
 const Login = () => {
+  const [userState, changeUserState] = useState('initState');
+  useEffect(() => {
+    //Maybe pass the username to the backend inside the useEffect hook.
+    console.log('userState2', userState);
+  });
+  console.log('userState1', userState);
   let navigate = useNavigate();
   const handleClick = () => {
     navigate('users/signup');
@@ -17,28 +23,35 @@ const Login = () => {
     // console.log(newUsername.value);
     // console.log(newPassword.value);
 
-    try {
-      console.log('before fetch');
-      const response = await fetch('http://localhost:3000/users/login', {
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-        body: JSON.stringify({
-          username: newUsername.value,
-          password: newPassword.value,
-        }),
-      });
-      console.log('response ', response);
-      const data = await response.json();
-      if (data) {
-        navigate('/users/dashboard');
-      }
-      console.log(data);
-    } catch (err) {
-      alert('bad');
-    }
+    // try {
+    console.log('before fetch');
+
+    await changeUserState(newUsername.value);
+    console.log('newUsername.value', newUsername.value);
+    //   const response = await fetch('http://localhost:3000/users/login', {
+    //     headers: {
+    //       Accept: 'application/json',
+    //       'Content-Type': 'application/json',
+    //     },
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //       username: newUsername.value,
+    //       password: newPassword.value,
+    //     }),
+    //   });
+    //   console.log('response ', response);
+    //   const data = await response.json();
+    //   if (data) {
+    //     //Uncomment when backend connection is set up
+    //     // const [userState, changeUserState] = useState('');
+    //     // changeUserState(newUsername.value);
+    //     // console.log('userState', userState);
+    //     navigate('/users/dashboard'); //Update state with current users username?
+    //   }
+    //   console.log(data);
+    // } catch (err) {
+    //   alert('bad');
+    // }
     // .then((data) => data.json())
     // .then((data) => {
     //   console.log('this is fetch response', data);
