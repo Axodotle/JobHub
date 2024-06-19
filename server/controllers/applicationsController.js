@@ -1,8 +1,8 @@
 const db = require('../models/userModels');
 
-const applicationController = {};
+const appController = {};
 
-applicationController.createApp = async (req, res, next) => {
+appController.createApp = async (req, res, next) => {
   const { company, date_applied, roles, status } = req.body;
 
   const params = [company, date_applied, roles, status];
@@ -20,12 +20,12 @@ applicationController.createApp = async (req, res, next) => {
       console.log(err);
       return next({
         error: err,
-        message: 'Error in applicationController.createApp',
+        message: 'Error in appController.createApp',
       });
     });
 };
 
-applicationController.getApp = async (req, res, next) => {
+appController.getApp = async (req, res, next) => {
   const { id } = req.params;
   const query = `SELECT a.id, a.company, a.date_applied, a.status, a.role, users.username
     FROM applications a INNER JOIN users 
@@ -45,9 +45,9 @@ applicationController.getApp = async (req, res, next) => {
       console.log(err);
       return next({
         error: err,
-        message: 'Error in applicationController.getApp',
+        message: 'Error in appController.getApp',
       });
     });
 };
 
-module.exports = applicationController;
+module.exports = appController;

@@ -1,15 +1,18 @@
 const express = require('express');
 const cors = require('cors');
-const applicationsRouter = require('./routes/applications');
-const routerSignup = require('./routes/users'); //Change variable label to userRouter?
+const appRouter = require('./routes/appRouter');
+const authRouter = require('./routes/AuthRouter');
 const path = require('path');
 const app = express();
 
-const indexPath = path.join(__dirname, '../client/public/index.html');
+const indexPath = path.join(__dirname, '../client/dist/index.html');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+
+// // Serve static content
+// app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/', (req, res) => {
   res.sendFile(indexPath, (err) => {
@@ -25,13 +28,13 @@ app.get('/', (req, res) => {
   });
 });
 
-app.use('/users', routerSignup);
-app.use('/applications', applicationsRouter);
+app.use('/users', authRouter);
+app.use('/applications', appRouter);
 
 // Global error handler:
 app.use((err, req, res, next) => {
-  // Default error structure
   const defaultErr = {
+    log: 'Unrecognized error caught',
     status: 500,
     message: 'An error occurred',
   };
