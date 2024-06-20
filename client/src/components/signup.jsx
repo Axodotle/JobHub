@@ -43,7 +43,7 @@ const Signup = () => {
   return (
     <div className='signup-box'>
       <input type='text' id='username' name='username' placeholder='Username' />
-      <input type='text' id='password' name='password' placeholder='Password' />
+      <input type='password' id='password' name='password' placeholder='Password' />
       <input
         type='text'
         id='firstname'

@@ -17,8 +17,8 @@ const applicationsReducer = (state = initialState, action) => {
 
       const newCard = {
         appID,
-        company: action.payload.companyName,
-        date_applied: action.payload.dateApplied,
+        company: action.payload.company,
+        date_applied: action.payload.date_applied,
         status: action.payload.status,
         role: action.payload.role,
         notes: action.payload.notes,

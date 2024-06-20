@@ -7,7 +7,7 @@ import * as actions from '../redux/actions/actions';
 import Login from './login.jsx';
 
 const dashboard = ({ userState }) => {
-  const [dateApplied, setDateApplied] = useState(''); //are these necessary?
+  const [date_applied, setDateApplied] = useState(''); //are these necessary?
   const [appStatus, setAppStatus] = useState('');
   console.log('userState', userState);
 
@@ -26,14 +26,14 @@ const dashboard = ({ userState }) => {
   //add error handling so user can't submit without filling in all inputs
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const companyName = document.querySelector('#company_name');
+    const company = document.querySelector('#company');
     const date = document.querySelector('#start');
     const appStatus = document.querySelector('#status');
     const role = document.querySelector('#role');
     const notes = document.querySelector('#notes');
 
     const formObj = {
-      company: companyName.value,
+      company: company.value,
       date_applied: date.value,
       status: appStatus.value,
       role: role.value,
@@ -43,7 +43,7 @@ const dashboard = ({ userState }) => {
 
     dispatch(actions.addCard(formObj));
     //clear form values
-    companyName.value = '';
+    company.value = '';
     date.value = '';
     appStatus.value = '';
     role.value = '';
@@ -68,15 +68,15 @@ const dashboard = ({ userState }) => {
  *         "fmartin"          *
  *          "gking"           *
  ******************************/
-        // body: JSON.stringify({ username: userState, ...formObj }),
-        body: JSON.stringify({
-          username: 'hharris',
-          company: 'Codesmith',
-          date_applied: '2024-06-13',
-          notes: 'Does this work?',
-          role: 'Fellow',
-          status: 'Rejected',
-        }),
+        body: JSON.stringify({ username: userState, ...formObj }),
+        // body: JSON.stringify({
+        //   username: 'hharris',
+        //   company: 'Codesmith',
+        //   date_applied: '2024-06-13',
+        //   notes: 'Does this work?',
+        //   role: 'Fellow',
+        //   status: 'Rejected',
+        // }),
       });
       const data = await response.json();
       console.log('Response from DB Server: ', data);
@@ -91,28 +91,31 @@ const dashboard = ({ userState }) => {
       {/* <h1 className='header'>JobHub</h1> */}
       <div className='dashboard-top-container'>
         <div className='form_box'>
+          <h2>Welcome back, {userState}!</h2>
           <form className='inputs'>
             {' '}
             Job Application Form:
             <input
               type='text'
-              id='company_name'
+              id='company'
               placeholder='Company Name: '
+              required
             ></input>
-            <label htmlFor='dateApplied' id='dateApplied'>
+            <label htmlFor='date_applied' id='date_applied'>
               Date Applied:
             </label>
             <input
               type='date'
               id='start'
               name='date_applied'
-              value={dateApplied}
+              value={date_applied}
               min='2024-01-01'
               max='2028-12-31'
               onChange={handleOnChange}
+              required
             />
             <form className='status'>
-              <select name='Status' id='status' onChange={handleAppStatus}>
+              <select name='Status' id='status' onChange={handleAppStatus} required='true'>
                 <option value='' selected disabled hidden>
                   Select App Status...
                 </option>
@@ -124,8 +127,8 @@ const dashboard = ({ userState }) => {
                 <option value='Other'>Other</option>
               </select>
             </form>
-            <input type='text' id='role' placeholder='Role: '></input>
-            <input type='text' id='notes' placeholder='Notes: '></input>
+            <input type='text' id='role' placeholder='Role: ' required='true'></input>
+            <input type='text' id='notes' placeholder='Notes: ' required='true'></input>
             <button type='submit' className='btn' onClick={handleSubmit}>
               Submit
             </button>
