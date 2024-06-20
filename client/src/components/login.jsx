@@ -1,9 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+// import { useEffect, useState } from 'react';
 // import './styles.css';
 
-const Login = () => {
+const Login = ({ stateFunc }) => {
+  //Test to see if state is changing on button click as expected
+  // useEffect(() => {
+  //   //Maybe pass the username to the backend inside the useEffect hook.
+  //   console.log('userState2', userState);
+  // });
   let navigate = useNavigate();
   const handleClick = () => {
     navigate('users/signup');
@@ -21,9 +26,10 @@ const Login = () => {
       console.log('before fetch');
       const response = await fetch('/users/login', {
         headers: {
-          Accept: 'application/json',
+          'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
+        //I think we should change the method?
         method: 'POST',
         body: JSON.stringify({
           username: newUsername.value,
@@ -34,6 +40,8 @@ const Login = () => {
       const data = await response.json();
       if (data) {
         alert('Welcome Back!');
+        //Uncomment when backend connection is set up
+        stateFunc(newUsername.value);
         navigate('/users/dashboard');
       }
       alert(data);

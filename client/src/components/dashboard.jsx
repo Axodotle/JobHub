@@ -4,10 +4,12 @@ import ApplicationList from './application-list-component/application-list.jsx';
 import Sidebar from './sidebar';
 import { useDispatch } from 'react-redux';
 import * as actions from '../redux/actions/actions';
+import Login from './login.jsx';
 
-const dashboard = (props) => {
+const dashboard = ({ userState }) => {
   const [dateApplied, setDateApplied] = useState(''); //are these necessary?
   const [appStatus, setAppStatus] = useState('');
+  console.log('userState', userState);
 
   const dispatch = useDispatch();
 
@@ -22,7 +24,7 @@ const dashboard = (props) => {
   };
 
   //add error handling so user can't submit without filling in all inputs
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const companyName = document.querySelector('#company_name');
     const date = document.querySelector('#start');
@@ -31,8 +33,8 @@ const dashboard = (props) => {
     const notes = document.querySelector('#notes');
 
     const formObj = {
-      companyName: companyName.value,
-      dateApplied: date.value,
+      company: companyName.value,
+      date_applied: date.value,
       status: appStatus.value,
       role: role.value,
       notes: notes.value,
@@ -40,14 +42,47 @@ const dashboard = (props) => {
     console.log('formObj', formObj);
 
     dispatch(actions.addCard(formObj));
+    //clear form values
     companyName.value = '';
     date.value = '';
     appStatus.value = '';
     role.value = '';
     notes.value = '';
 
+    console.log('application to backend', { username: userState, ...formObj });
     // create a request to database with new job app
-    //clear form via updated state
+    try {
+      const response = await fetch('/applications/newapp', {
+        headers: {
+          'Accept': 'application/json', //prettier/eslint reformatting on save
+          'Content-Type': 'application/json',
+        },
+        method: 'POST',
+
+/******************************
+ * THESE USERSNAMES ALSO WORK *
+ *          "bjones"          *
+ *         "clarkson"         *
+ *         "djohnson"         *
+ *        "ewilliams"         *
+ *         "fmartin"          *
+ *          "gking"           *
+ ******************************/
+        // body: JSON.stringify({ username: userState, ...formObj }),
+        body: JSON.stringify({
+          username: 'hharris',
+          company: 'Codesmith',
+          date_applied: '2024-06-13',
+          notes: 'Does this work?',
+          role: 'Fellow',
+          status: 'Rejected',
+        }),
+      });
+      const data = await response.json();
+      console.log('Response from DB Server: ', data);
+    } catch (err) {
+      console.log('Fetch error: ', err);
+    }
   };
 
   return (
@@ -64,7 +99,9 @@ const dashboard = (props) => {
               id='company_name'
               placeholder='Company Name: '
             ></input>
-            <label htmlFor='dateApplied' id='dateApplied'>Date Applied:</label>
+            <label htmlFor='dateApplied' id='dateApplied'>
+              Date Applied:
+            </label>
             <input
               type='date'
               id='start'
