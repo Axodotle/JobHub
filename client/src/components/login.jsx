@@ -19,7 +19,7 @@ const Login = () => {
 
     try {
       console.log('before fetch');
-      const response = await fetch('http://localhost:3000/users/login', {
+      const response = await fetch('/users/login', {
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
@@ -33,9 +33,10 @@ const Login = () => {
       console.log('response ', response);
       const data = await response.json();
       if (data) {
+        alert('Welcome Back!');
         navigate('/users/dashboard');
       }
-      console.log(data);
+      alert(data);
     } catch (err) {
       alert('bad');
     }
