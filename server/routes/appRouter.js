@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const appController = require('../controllers/applicationsController');
+const appController = require('../controllers/appController');
 
-router.post('/', appController.createApp, (req, res) => {
-  return res.status(200).json(res.locals.createApp);
+router.post('/newapp', appController.newApp, (req, res) => {
+  return res.status(200).json(res.locals.newApp);
 });
 
-router.get('/:id', appController.getApp, (req, res) => {
-  return res.status(200).json(res.locals.getApp);
-});
+// router.get('/:id', appController.getApp, (req, res) => {
+//   return res.status(200).json(res.locals.getApp);
+// });
 
 module.exports = router;

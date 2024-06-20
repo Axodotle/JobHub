@@ -1,11 +1,4 @@
-const {
-  createUser,
-  checkAccess,
-  getUserById,
-  updateUser,
-  deleteUser,
-  getAllUsers,
-} = require('../models/userModel');
+const userModel = require('../models/userModel');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const userController = {};
@@ -29,7 +22,12 @@ userController.createUser = async (req, res, next) => {
   const { username, firstName, lastName } = req.body;
   const hashWord = res.locals.hashWord;
   try {
-    const result = await createUser(username, hashWord, firstName, lastName);
+    const result = await userModel.createUser(
+      username,
+      hashWord,
+      firstName,
+      lastName
+    );
     res.locals.newUser = { message: 'User created successfully', user: result };
     return next();
   } catch (err) {
@@ -39,7 +37,7 @@ userController.createUser = async (req, res, next) => {
 
 userController.validateLogin = async (req, res, next) => {
   const { username, password } = req.body;
-  const isAllowed = await checkAccess(username, password);
+  const isAllowed = await userModel.checkAccess(username, password);
   res.locals.isAllowed = isAllowed;
   return next();
 };

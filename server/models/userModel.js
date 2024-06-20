@@ -1,7 +1,9 @@
 const db = require('../db');
 const bcrypt = require('bcrypt');
 
-async function createUser(username, password, firstName, lastName) {
+const userModel = {};
+
+userModel.createUser = async (username, password, firstName, lastName) => {
   const query = `
       INSERT INTO users (username, password, first_name, last_name)
       VALUES ($1, $2, $3, $4)
@@ -15,9 +17,9 @@ async function createUser(username, password, firstName, lastName) {
   } catch (err) {
     throw err; // Let the caller handle the error
   }
-}
+};
 
-async function getUserById(userId) {
+userModel.getUserById = async (userId) => {
   const query = `
       SELECT *
       FROM users
@@ -32,9 +34,9 @@ async function getUserById(userId) {
   } catch (err) {
     throw err;
   }
-}
+};
 
-async function getUser(username) {
+userModel.getUser = async (username) => {
   const query = `
         SELECT *
         FROM users
@@ -50,9 +52,9 @@ async function getUser(username) {
     console.log(err);
     throw err;
   }
-}
+};
 
-async function getAllUsers() {
+userModel.getAllUsers = async () => {
   const query = `
       SELECT *
       FROM users;
@@ -65,9 +67,9 @@ async function getAllUsers() {
   } catch (err) {
     throw err;
   }
-}
+};
 
-async function checkAccess(username, password) {
+userModel.checkAccess = async (username, password) => {
   const query = `
       SELECT * FROM users
       WHERE username = $1;
@@ -87,7 +89,7 @@ async function checkAccess(username, password) {
     console.error('Wrong username or password', err);
     throw err;
   }
-}
+};
 // getAllUsers();
 
-module.exports = { createUser, getUser, getUserById, getAllUsers, checkAccess };
+module.exports = userModel;
