@@ -6,7 +6,7 @@ const authRouter = require('./routes/authRouter');
 const path = require('path');
 const app = express();
 // const dotenv = require('/dotenv/config.js');
-require('dotenv').config();
+// require('dotenv').config();
 
 const indexPath = path.join(__dirname, '../client/dist/index.html');
 
