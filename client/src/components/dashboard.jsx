@@ -58,19 +58,30 @@ const dashboard = ({ userState }) => {
           'Content-Type': 'application/json',
         },
         method: 'POST',
+
+/******************************
+ * THESE USERSNAMES ALSO WORK *
+ *          "bjones"          *
+ *         "clarkson"         *
+ *         "djohnson"         *
+ *        "ewilliams"         *
+ *         "fmartin"          *
+ *          "gking"           *
+ ******************************/
         // body: JSON.stringify({ username: userState, ...formObj }),
         body: JSON.stringify({
-        username: "anar5555",
-        company: "Codesmith",
-        date_applied: "2024-06-13",
-        notes: "Does this work?",
-        role: "Fellow",
-        status: "Rejected",
-      }),
+          username: 'hharris',
+          company: 'Codesmith',
+          date_applied: '2024-06-13',
+          notes: 'Does this work?',
+          role: 'Fellow',
+          status: 'Rejected',
+        }),
       });
-      console.log('response', response)
+      const data = await response.json();
+      console.log('Response from DB Server: ', data);
     } catch (err) {
-      console.log(err);
+      console.log('Fetch error: ', err);
     }
   };
 
