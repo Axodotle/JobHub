@@ -39,14 +39,14 @@ const Login = ({ stateFunc }) => {
       console.log('response ', response);
       const data = await response.json();
       if (data) {
-        alert('Welcome Back!');
+        // alert('Welcome Back!');
         //Uncomment when backend connection is set up
         stateFunc(newUsername.value);
         navigate('/users/dashboard');
       }
-      alert(data);
+      // alert(data);
     } catch (err) {
-      alert('bad');
+      alert('Incorrect username or password');
     }
     // .then((data) => data.json())
     // .then((data) => {
@@ -70,7 +70,7 @@ const Login = ({ stateFunc }) => {
           <br></br>
           password:{' '}
           <input
-            type='text'
+            type='password'
             id='passwordInput' /*onChange={storePassword}*/
           ></input>
           <button type='submit' id='loginButton' onClick={loginAccount}>
