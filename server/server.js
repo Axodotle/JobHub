@@ -1,3 +1,4 @@
+const dbErrorHandler = require('./controllers/dbErrorHandler');
 const express = require('express');
 const cors = require('cors');
 const appRouter = require('./routes/appRouter');
@@ -31,6 +32,8 @@ app.get('/', (req, res) => {
 app.use('/users', authRouter);
 app.use('/applications', appRouter);
 
+app.use(dbErrorHandler);
+
 // Global error handler:
 app.use((err, req, res, next) => {
   const defaultErr = {
@@ -48,4 +51,4 @@ app.listen(3000, () => {
 });
 
 module.exports = app;
-``
+``;

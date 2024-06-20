@@ -28,10 +28,13 @@ userController.hashing = async (req, res, next) => {
 userController.createUser = async (req, res, next) => {
   const { username, firstName, lastName } = req.body;
   const hashWord = res.locals.hashWord;
-  const newUser = await createUser(username, hashWord, firstName, lastName);
-  res.locals.newUser = newUser;
-  // console.log('New user created:', newUser);
-  return next();
+  try {
+    const result = await createUser(username, hashWord, firstName, lastName);
+    res.locals.newUser = { message: 'User created successfully', user: result };
+    return next();
+  } catch (err) {
+    return next(err);
+  }
 };
 
 userController.validateLogin = async (req, res, next) => {
