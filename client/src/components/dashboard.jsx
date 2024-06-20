@@ -94,7 +94,7 @@ const dashboard = ({ userState }) => {
           <h2>Welcome back, {userState}!</h2>
           <form className='inputs'>
             {' '}
-            Job Application Form:
+            <h3>Job Application Form:</h3>
             <input
               type='text'
               id='company'

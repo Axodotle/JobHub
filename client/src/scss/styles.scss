@@ -1,9 +1,13 @@
 #signup {
   background-color: transparent;
   border: transparent;
-  color: rgb(28, 28, 221);
+  color: #FF0D86;
 }
 
+.logo{
+  width: 15%;
+  height: auto
+}
 #signup:hover {
   cursor: pointer;
 }
@@ -13,7 +17,8 @@
 }
 
 body {
-  background-color: pink;
+  background-color: #191970;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .login-container, .signup-box {
@@ -21,10 +26,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #FF0D86;
+  background-color: ghostwhite;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding-bottom: 20px;
+}
+
+.signup-box {
+  padding-top: 20px;
 }
 
 .main {
-  background-color: pink;
+  background-color: #191970;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -35,7 +49,7 @@ body {
   font-family: Josefin Sans;
   font-size: 60px;
   font-weight: bold;
-  color: rgb(55, 53, 53);
+  color: #FF0D86;
   text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
     1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
     5px 13px 15px black;
@@ -48,7 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  background-color: lightcyan;
+  background-color: #FF0D86;
   padding: 10px;
   border-radius: 6px;
   align-items: center;
@@ -78,6 +92,7 @@ body {
   border: solid rgb(255, 255, 255) 8px;
   gap: 15px;
   width: 80%;
+  background-color: rgb(234, 231, 231);
 }
 
 .sidebar-container {
@@ -98,6 +113,8 @@ body {
   height: 200px;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
+  padding: 10px;
 }
 
 .application-card {
@@ -150,11 +167,12 @@ body {
 #date_applied {
   padding: 1px;
   margin: 10px;
+  margin: 10px;
   width: 80%;
 }
 
 .btn {
-  background-color: rgb(28, 157, 221);
+  background-color: #FF0D86;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -162,4 +180,20 @@ body {
   width: 20%;
   display: flex;
   justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#loginButton {
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #FF0D86;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 50px;
+}
+.logo-text{
+  width: 30%;
+  height: auto;
+  
 }

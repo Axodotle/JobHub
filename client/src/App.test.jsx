@@ -34,17 +34,13 @@ describe('testing homepage', () => {
 
   it('loads and displays main heading', async () => {
     // ACT
-    await screen.findByRole('heading');
+    // await screen.findByRole('appName');
     // ASSERT
-    expect(screen.getByRole('heading')).toHaveTextContent('JobHub');
+    expect(await screen.getByRole('appName')).toHaveTextContent('Purrrfect Hire'); 
   });
 
   //should probably be in login.test.jsx
-  // it('loads and displays login form correctly', async () => {
-  //   // ACT
-  //   await screen.findByRole('form');
-  //   // ASSERT
-  //   expect(screen.getByRole('form')).toHaveTextContent('username');
-  //   expect(screen.getByRole('form')).toHaveTextContent('password');
-  // });
+  it('loads and displays login form correctly', async () => {
+    expect(await screen.findByText(/username/)).toHaveTextContent(/password/);
+  });
 });

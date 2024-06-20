@@ -27,13 +27,13 @@ export default function Sidebar() {
 
   return (
     <div className='sidebar-container'>
+      <SidebarBox boxHeader='Total Applications: ' lowerBox={totalApps} />
+      <SidebarBox boxHeader="Today's Applications: " lowerBox={counter} />
       <SidebarBox
         id='interview-box'
         boxHeader='Next Interview: '
         lowerBox='Wednesday 3 PM EST'
       />
-      <SidebarBox boxHeader='Total Applications: ' lowerBox={totalApps} />
-      <SidebarBox boxHeader="Today's Applications: " lowerBox={counter} />
     </div>
   );
 }

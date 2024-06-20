@@ -60,7 +60,7 @@ const Login = ({ stateFunc }) => {
   return (
     <div className='login-container'>
       <div>
-        Login
+        <h2>Login</h2>
         <form /*onSubmit={handleSubmit}*/ id='loginform'>
           username:{' '}
           <input
@@ -79,7 +79,7 @@ const Login = ({ stateFunc }) => {
         </form>
       </div>
       <button onClick={handleClick} id='signup'>
-        sign up
+        Don't have an account? Sign up!
       </button>
     </div>
   );

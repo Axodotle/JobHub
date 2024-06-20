@@ -11,8 +11,12 @@ export default function App() {
   const [userState, changeUserState] = useState('');
 
   return (
+  
     <div>
-      <h1 className='header'>JobHub</h1>
+      <img src = 'https://i.imgur.com/OJ4myWs.jpg' className = 'logo'/>
+    
+      {/* <h1 className='header' role='appName'>Purrrfect Hire</h1> */}
+      <img src = 'https://i.imgur.com/eWDDBUa.png' className = 'logo-text'/>
       <Routes>
         <Route path='/' element={<Login stateFunc={changeUserState} />} />
         <Route path='/users/signup' element={<Signup />} />
