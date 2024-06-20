@@ -42,6 +42,7 @@ const Signup = () => {
 
   return (
     <div className='signup-box'>
+      <img src='https://i.imgur.com/OJ4myWs.jpg' className='logo'/>
       <input type='text' id='username' name='username' placeholder='Username' />
       <input type='password' id='password' name='password' placeholder='Password' />
       <input
@@ -51,7 +52,7 @@ const Signup = () => {
         placeholder='Firstname'
       />
       <input type='text' id='lastname' name='lastname' placeholder='Lastname' />
-      <button type='button' onClick={createAccount}>
+      <button type='button' onClick={createAccount} id='signupBtn'>
         Sign Up
       </button>
     </div>

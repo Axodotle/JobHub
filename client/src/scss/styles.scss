@@ -5,7 +5,7 @@
 }
 
 .logo{
-  width: 15%;
+  width: 40%;
   height: auto
 }
 #signup:hover {
@@ -192,8 +192,31 @@ body {
   border: none;
   width: 50px;
 }
+#signupBtn{
+  padding: 10px;
+  margin: 10px;
+  background-color: #FF0D86;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+}
+#logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
 .logo-text{
   width: 30%;
   height: auto;
-  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#username, #password, #firstname, #lastname {
+  margin: 2px;
 }

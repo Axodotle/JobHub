@@ -13,10 +13,11 @@ export default function App() {
   return (
   
     <div>
-      <img src = 'https://i.imgur.com/OJ4myWs.jpg' className = 'logo'/>
-    
       {/* <h1 className='header' role='appName'>Purrrfect Hire</h1> */}
+      <div id='logo-container'>
       <img src = 'https://i.imgur.com/eWDDBUa.png' className = 'logo-text'/>
+      </div>
+
       <Routes>
         <Route path='/' element={<Login stateFunc={changeUserState} />} />
         <Route path='/users/signup' element={<Signup />} />
