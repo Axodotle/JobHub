@@ -5,8 +5,13 @@ const appRouter = require('./routes/appRouter');
 const authRouter = require('./routes/authRouter');
 const path = require('path');
 const app = express();
+// const dotenv = require('/dotenv/config.js');
+require('dotenv').config();
 
 const indexPath = path.join(__dirname, '../client/dist/index.html');
+
+const PORT = process.env.PORT || 8000;
+console.log('port', PORT);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -46,8 +51,8 @@ app.use((err, req, res, next) => {
   return res.status(errorObj.status).json({ error: errorObj.message });
 });
 
-app.listen(3000, () => {
-  console.log('listening on port 3000');
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`);
 });
 
 module.exports = app;
