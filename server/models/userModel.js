@@ -1,4 +1,5 @@
 const db = require('../db');
+const bcrypt = require('bcrypt');
 
 async function createUser(username, password, firstName, lastName) {
   const query = `
@@ -66,6 +67,27 @@ async function getAllUsers() {
   }
 }
 
+async function checkAccess(username, password) {
+  const query = `
+      SELECT * FROM users
+      WHERE username = $1;
+    `;
+  try {
+    const values = [username];
+    const result = await db.query(query, values);
+    if (result.rows.length === 0) {
+      console.log(`No account with username "${username}"`);
+      return false; // User not found
+    }
+    const hashedPassword = result.rows[0].password;
+    const match = await bcrypt.compare(password, hashedPassword);
+    console.log('Welcome Back');
+    return match;
+  } catch (err) {
+    console.error('Wrong username or password', err);
+    throw err;
+  }
+}
 // getAllUsers();
 
-module.exports = { createUser, getUser, getUserById, getAllUsers };
+module.exports = { createUser, getUser, getUserById, getAllUsers, checkAccess };

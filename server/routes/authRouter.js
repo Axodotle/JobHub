@@ -2,10 +2,6 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
 
-// authRouter.get('/', (req, res) => {
-//   res.json({ message: 'Server Workin' });
-// });
-
 router.post(
   '/signup',
   userController.hashing,
@@ -15,6 +11,11 @@ router.post(
     return res.status(200).json(res.locals.newUser);
   }
 );
+
+router.post('/login', userController.validateLogin, (req, res) => {
+  console.log('login back to router');
+  return res.status(200).json(res.locals.isAllowed);
+});
 
 // router.post('/login', userController.setCookies, userController.verifyUser,
 //   (req, res) => {

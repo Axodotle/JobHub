@@ -1,5 +1,6 @@
 const {
   createUser,
+  checkAccess,
   getUserById,
   updateUser,
   deleteUser,
@@ -8,8 +9,6 @@ const {
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const userController = {};
-
-// const db = require('../models/userModels');
 
 userController.hashing = async (req, res, next) => {
   const { password } = req.body;
@@ -32,6 +31,13 @@ userController.createUser = async (req, res, next) => {
   const newUser = await createUser(username, hashWord, firstName, lastName);
   res.locals.newUser = newUser;
   // console.log('New user created:', newUser);
+  return next();
+};
+
+userController.validateLogin = async (req, res, next) => {
+  const { username, password } = req.body;
+  const isAllowed = await checkAccess(username, password);
+  res.locals.isAllowed = isAllowed;
   return next();
 };
 
