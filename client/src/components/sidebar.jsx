@@ -21,8 +21,8 @@ export default function Sidebar() {
   const date = getFormattedDate();
   console.log('date', date);
   appsList.forEach((app) => {
-    console.log('app.dateApplied', app.dateApplied);
-    if (app.dateApplied === date) counter++;
+    console.log('app.date_applied', app.date_applied);
+    if (app.date_applied === date) counter++;
   });
 
   return (

@@ -1,13 +1,5 @@
 import * as types from '../actions/actionTypes';
 
-// const initialState = {
-//   companyName : '',
-//   dateApplied : '',
-//   status: '',
-//   role: '',
-//   notes: '',
-// };
-
 const initialState = {
   totalApps: 0,
   appsList: [], //hold individual application objects
@@ -25,8 +17,8 @@ const applicationsReducer = (state = initialState, action) => {
 
       const newCard = {
         appID,
-        companyName: action.payload.companyName,
-        dateApplied: action.payload.dateApplied,
+        company: action.payload.companyName,
+        date_applied: action.payload.dateApplied,
         status: action.payload.status,
         role: action.payload.role,
         notes: action.payload.notes,

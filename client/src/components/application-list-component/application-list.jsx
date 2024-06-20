@@ -10,8 +10,8 @@ export default function ApplicationList() {
     //add notes to the application card
     return (
       <ApplicationCard
-        companyName={app.companyName}
-        dateApplied={app.dateApplied}
+        company={app.company}
+        date_applied={app.date_applied}
         status={app.status}
         role={app.role}
         notes={app.notes}
