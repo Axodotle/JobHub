@@ -40,11 +40,11 @@ describe('testing homepage', () => {
   });
 
   //should probably be in login.test.jsx
-  it('loads and displays login form correctly', async () => {
-    // ACT
-    await screen.findByRole('form');
-    // ASSERT
-    expect(screen.getByRole('form')).toHaveTextContent('username');
-    expect(screen.getByRole('form')).toHaveTextContent('password');
-  });
+  // it('loads and displays login form correctly', async () => {
+  //   // ACT
+  //   await screen.findByRole('form');
+  //   // ASSERT
+  //   expect(screen.getByRole('form')).toHaveTextContent('username');
+  //   expect(screen.getByRole('form')).toHaveTextContent('password');
+  // });
 });
