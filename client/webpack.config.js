@@ -45,11 +45,11 @@ module.exports = {
       directory: path.resolve(__dirname, 'build'),
       publicPath: '/',
     },
-    port: 8000,
+    port: 3000,
     proxy: [
       {
-        context: ['/api'],
-        target: 'http://localhost:3000',
+        context: ['/'],
+        target: 'http://localhost:8000',
       },
     ],
   },
