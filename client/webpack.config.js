@@ -6,15 +6,16 @@ module.exports = {
   mode: 'development',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
- 
+
   module: {
     rules: [
       {
         test: /\.jsx?/,
         exclude: /node_modules/,
-        
+
         use: {
           loader: 'babel-loader',
           options: {
@@ -22,10 +23,10 @@ module.exports = {
           },
         },
       },
-      
+
       {
         test: /\.s?css/,
-      
+
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
@@ -39,15 +40,16 @@ module.exports = {
     }),
   ],
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, 'build'),
-      publicPath: '/build',
+      publicPath: '/',
     },
-    port: 8000,
+    port: 3000,
     proxy: [
       {
-        context: ['/api'],
-        target: 'http://localhost:3000',
+        context: ['/'],
+        target: 'http://localhost:8000',
       },
     ],
   },
